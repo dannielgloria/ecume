@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  http:
   flutter:
     sdk: flutter
   # flutter_svg: ^0.21.0+1
@@ -35,6 +36,13 @@ dev_dependencies:
     sdk: flutter
   
   flutter_native_splash: ^0.2.8
+
+  flutter_launcher_icons: "^0.8.0"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
 
 flutter_native_splash:
   color: "#ffffff"

@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "ecume",
+            "name": "ecume (Flutter)",
             "request": "launch",
             "type": "dart"
         }
