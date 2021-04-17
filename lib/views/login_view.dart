@@ -1,6 +1,7 @@
 import 'package:ecume/ProgressHUD.dart';
 import 'package:ecume/api/api_service.dart';
 import 'package:ecume/model/login_model.dart';
+import 'package:ecume/views/recoverPwd_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatefulWidget {
@@ -89,7 +90,7 @@ class _LoginViewState extends State<LoginView> {
                           ),
                         ),
                         SizedBox(height: 20),
-                        new TextFormField(
+                        TextFormField(
                           keyboardType: TextInputType.text,
                           onSaved: (input) => requestModel.password = input,
                           validator: (input) => input.length < 3
@@ -130,6 +131,17 @@ class _LoginViewState extends State<LoginView> {
                               ),
                             ),
                           ),
+                        ),
+                        SizedBox(height: 12),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => RecoverPwdView()),
+                            );
+                          },
+                          child: Text("Olvide mi contraseña"),
                         ),
                         SizedBox(height: 30),
                         FlatButton(
