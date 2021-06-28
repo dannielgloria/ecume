@@ -1,4 +1,4 @@
-import 'package:ecume/views/login_view.dart';
+import 'package:ecume/views/auth/login_form.dart';
 import 'package:flutter/material.dart';
 
 void main() {
