@@ -3,7 +3,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class UserRepository {
   static String mainUrl = "https://ecume.herokuapp.com";
-  var loginUrl = '$mainUrl/apiECUME/login';
+  // var loginUrl = '$mainUrl/apiECUME/login';
+  var loginUrl = 'https://ecume.herokuapp.com/apiECUME/login';
 
   final FlutterSecureStorage storage = new FlutterSecureStorage();
   final Dio _dio = Dio();
@@ -31,6 +32,7 @@ class UserRepository {
       "email": email,
       "password": password,
     });
+    print(response);
     return response.data["token"];
   }
 }

@@ -1,4 +1,4 @@
-import 'package:ecume/model/recoverPwd_model.dart';
+// import 'package:ecume/model/recoverPwd_model.dart';
 import 'package:flutter/material.dart';
 
 class RecoverPwdView extends StatefulWidget {
@@ -10,12 +10,12 @@ class _RecoverPwdViewState extends State<RecoverPwdView> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
   bool isApiCallProcess = false;
-  RecoverPwdRequestModel requestModel;
+  // RecoverPwdRequestModel requestModel;
 
   @override
   void initState() {
     super.initState();
-    requestModel = new RecoverPwdRequestModel();
+    // requestModel = new RecoverPwdRequestModel();
   }
 
   // Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class _RecoverPwdViewState extends State<RecoverPwdView> {
                         SizedBox(height: 25),
                         new TextFormField(
                           keyboardType: TextInputType.phone,
-                          onSaved: (input) => requestModel.phone = input,
+                          // onSaved: (input) => requestModel.phone = input,
                           validator: (input) => input.length < 10
                               ? "El número telefónico debe tener 10 caracteres"
                               : null,

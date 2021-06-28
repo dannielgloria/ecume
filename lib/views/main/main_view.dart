@@ -13,18 +13,26 @@ class _MainViewState extends State<MainView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
-          leading: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  "https://yt3.ggpht.com/yti/ANoDKi5R5eJSjZigdWmIcZKFAtqwG4svMcAAN0Iyvw4j=s108-c-k-c0x00ffffff-no-rj"),
-            ),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: <Color>[Colors.blueAccent, Colors.blue])),
           ),
-          title: Text("AUTH WITH REST"),
+          // backgroundColor: Colors.blueAccent,
+          title: Text(
+            "E C U M E",
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.w700,
+                color: Colors.white),
+          ),
+          centerTitle: true,
           actions: [
             IconButton(
-                icon: Icon(EvaIcons.logOutOutline),
+                icon: Icon(EvaIcons.logOut),
+                color: Colors.white,
                 onPressed: () {
                   BlocProvider.of<AuthenticationBloc>(context).add(
                     LoggedOut(),
