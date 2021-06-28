@@ -5,17 +5,17 @@ import 'package:introduction_screen/introduction_screen.dart';
 
 import 'login_view.dart';
 
-class IntroPage extends StatefulWidget {
+class IntroView extends StatefulWidget {
   final UserRepository userRepository;
-  IntroPage({Key key, @required this.userRepository}) : super(key: key);
+  IntroView({Key key, @required this.userRepository}) : super(key: key);
 
   @override
-  _IntroPageState createState() => _IntroPageState(userRepository);
+  _IntroViewState createState() => _IntroViewState(userRepository);
 }
 
-class _IntroPageState extends State<IntroPage> {
+class _IntroViewState extends State<IntroView> {
   final UserRepository userRepository;
-  _IntroPageState(this.userRepository);
+  _IntroViewState(this.userRepository);
   bool clicked = false;
   void afterIntroComplete() {
     setState(() {
